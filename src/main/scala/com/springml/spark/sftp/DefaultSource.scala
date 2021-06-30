@@ -120,7 +120,7 @@ class DefaultSource extends RelationProvider with SchemaRelationProvider with Cr
     val rowTag = parameters.getOrElse(constants.xmlRowTag, null)
     val rootTag = parameters.getOrElse(constants.xmlRootTag, null)
 
-    val supportedFileTypes = List("csv", "json", "avro", "parquet", "txt", "xml","orc")
+    val supportedFileTypes = List("csv", "json", "avro", "parquet", "txt", "xml","orc","com.github.saurfang.sas.spark")
     if (!supportedFileTypes.contains(fileType)) {
       sys.error("fileType " + fileType + " not supported. Supported file types are " + supportedFileTypes)
     }
